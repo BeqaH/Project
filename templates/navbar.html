@@ -1,0 +1,48 @@
+
+
+<nav class="navbar navbar-expand-lg bg-dark ps-3 pe-5" data-bs-theme="dark">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 navi">
+                <li>
+                    <div class="imgfortbc">
+                        <a href="https://www.tbceducation.ge/">
+                            <img src="/static/img/tbc-logo-removebg-preview.png">
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item ps-3">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" aria-disabled="true" href="/tour">Tours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-disabled="true" href="/addyours">Add Yours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-disabled="true" href="/contact_us">Contact Us</a>
+                </li>
+            </ul>
+            <div class="d-flex loginistvis" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                <button class="btn btn-outline-warning me-3" type="submit" id="searchButton">Search</button>
+            </div>
+
+            {% if current_user.is_authenticated %}
+            <div class="d-flex loginistviss" role="search">
+                <button class="btn btn-outline-danger" type="submit"><a href="/logout">Logout</a></button>
+            </div>
+
+            {% else %}
+            <div class="d-flex loginistvis" role="search">
+                <button class="btn btn-outline-success" type="submit"><a href="/login">Login</a></button>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</nav>

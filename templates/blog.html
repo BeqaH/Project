@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for blog in blogs %}
+    <section class="s3">
+        <div class="cardss">
+            <div class="card">
+                <img src="/static/img/{{ blog.image }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">{{ blog.name }}</h4>
+                    <p class="card-text">{{ blog.description }}
+                    </p>
+                    <a href="/tour" class="btn btn-dark">View Tours</a>
+                    <a href="/addyours" class="btn btn-success">Add Yours</a>
+                    <a href="/viewblog/{{ blog.id }}" class="btn btn-warning">See Details</a>
+                    {% if current_user.role == "admin" %}
+                    <a href="/edit_blog/{{ blog.id }}" class="btn btn-info">Edit</a>
+                    <a href="/delete_blog/{{ blog.id }}" class="btn btn-danger">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+{% endblock %}
+
+
+
+

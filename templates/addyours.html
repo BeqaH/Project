@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body class="shes">
+<section class="abovesect">
+    <div>
+        <h2>Post Whatever You Feel Like</h2>
+        <h5>Share your unforgettable travel experiences by posting photos, reviews, and stories to create lasting
+            memories and inspire fellow travelers.</h5>
+    </div>
+</section>
+
+<section>
+    <div class="shesavsebi">
+        <form method="post", enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="form-outline" id="typeText"  data-mdb-input-init>
+                {{ form.name(class="form-control", placeholder=form.name.label.text) }}
+            </div>
+            {{ form.image(class="form-control", placeholder=form.image.label.text) }}
+            <div  id="customFile" data-mdb-input-init>
+                {{ form.description(class="form-control form-outline", placeholder=form.description.label.text) }}
+            </div>
+            {{ form.submit(class="btn btn-dark me-3") }}
+        </form>
+    </div>
+</section>
+</body>
+{% endblock %}

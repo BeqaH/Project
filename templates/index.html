@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="s1">
+    <div class="container ms-5">
+        <h1>TOURISM</h1>
+        <h2 class="pt-4">TRAVEL BLOG</h2>
+        <p>
+            Welcome to our travel blog, a virtual haven for wanderers and adventure seekers alike. Here, we curate a
+            tapestry of tales, offering a vivid glimpse into the world of exploration and discovery. From the sun-kissed
+            shores of exotic beaches to the snow-draped peaks of majestic mountains, our blog is your compass to the
+            extraordinary. Immerse yourself in captivating narratives, practical travel tips, and the allure of diverse
+            cultures.<br> Whether you're a seasoned globetrotter or planning your inaugural journey, our pages are
+            infused
+            with the spirit of wanderlust, aiming to inspire, inform, and ignite the curiosity that fuels every
+            traveler's heart. Join us on this digital odyssey, where each post is a stepping stone towards crafting your
+            next unforgettable adventure. Travel with us, not just to places on the map, but to the soul-stirring
+            moments that make every expedition a story worth telling.</p>
+    </div>
+</section>
+
+<section class="s2 pb-5">
+    <h1>Make Your Choises</h1>
+    <hr>
+    <br>
+    <div class="holdcarusel">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade div2">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../static/img/italy.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Italy</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/img/germany.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Germany</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/img/greece.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Greece</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="carouselExampleFadee" class="carousel slide carousel-fade div2">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../static/img/japan.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Japan</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/img/southkorea.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>South Korea</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/img/indonesia.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Indonesia</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFadee"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFadee"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

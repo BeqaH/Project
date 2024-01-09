@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="s3">
+    <div class="cardss">
+        <div class="card">
+            <img src="/static/img/{{ blog.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">{{ blog.name }}</h4>
+                <p class="card-text">{{ blog.description }}
+                </p>
+                <a href="/tour" class="btn btn-dark">View Tours</a>
+                <a href="/addyours" class="btn btn-danger">Add Yours</a>
+                <a href="/viewblog/{{ blog.id }}" class="btn btn-warning">See Details</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="haha">
+    <div class="comment-section">
+        <h1 style="text-align: center;">Comment Section</h1>
+
+        <div class="comment-form">
+            <label for="comment">Add a Comment:</label>
+            <br>
+            <textarea id="comment" rows="4" placeholder="Write your comment here..." required></textarea>
+            <br>
+            <a href="#" class="btn btn-dark">Submit</a>
+        </div>
+
+        <h2>Comments:</h2>
+        <ul class="comments">
+            <li class="comment">This is a sample comment.</li>
+            <li class="comment">Another comment here.</li>
+        </ul>
+    </div>
+</section>
+
+{% endblock %}
